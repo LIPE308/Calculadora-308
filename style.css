@@ -1,0 +1,167 @@
+/* Define o estilo geral da página */
+body{
+    background: #2b2b2b; /* cor de fundo da página */
+    
+    display: flex; /* ativa o Flexbox (sistema de alinhamento moderno) */
+
+    justify-content: center; 
+    /* alinha os elementos horizontalmente (centro da tela) */
+
+    align-items: center; 
+    /* alinha os elementos verticalmente (centro da tela) */
+
+    height: 100vh; 
+    /* faz o body ocupar 100% da altura da tela */
+    
+    font-family: Arial, Helvetica, sans-serif; 
+    /* define a fonte padrão */
+}
+
+
+/* Caixa principal da calculadora */
+main{
+    background: #3b89ff; /* cor de fundo do card */
+
+    padding: 25px; 
+    /* espaço interno entre o conteúdo e a borda */
+
+    border-radius: 12px; 
+    /* deixa as bordas arredondadas */
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    /* cria uma sombra para dar efeito de profundidade */
+
+    width: 280px; 
+    /* largura fixa da calculadora */
+
+    display: flex; 
+    /* ativa flexbox dentro do main */
+
+    flex-direction: column; 
+    /* organiza os elementos em coluna (um abaixo do outro) */
+
+    gap: 10px; 
+    /* espaço automático entre os elementos */
+}
+
+
+/* Inputs dos números */
+input{
+    width: 93%; 
+    /* ocupa toda a largura do container */
+
+    padding: 10px; 
+    /* espaço interno para o texto não ficar colado */
+
+    border-radius: 8px; 
+    /* arredonda as bordas */
+
+    border: none; 
+    /* remove a borda padrão */
+
+    outline: none; 
+    /* remove a borda azul ao clicar */
+
+    font-size: 16px; 
+    /* aumenta o tamanho do texto */
+
+    
+}
+
+
+/* Botões */
+button{
+    width: 100%; 
+    /* botão ocupa toda a largura */
+
+    padding: 10px; 
+    /* aumenta o tamanho do botão */
+
+    border: none; 
+    /* remove borda padrão */
+
+    border-radius: 8px; 
+    /* deixa o botão arredondado */
+
+    background: #202b5f; 
+    /* cor do botão */
+
+    color: white; 
+    /* cor do texto */
+
+    cursor: pointer; 
+    /* muda o cursor para "mãozinha" */
+
+    transition: 0.8s; 
+    /* cria animação suave para mudanças */
+}
+
+
+/* Efeito quando passa o mouse */
+button:hover{
+    background: #7662f5; 
+    /* muda a cor quando passa o mouse */
+}
+
+
+/* Efeito quando clica */
+button:active{
+    transform: scale(0.97); 
+    /* dá efeito de "afundar" o botão */
+}
+
+
+/* Resultado */
+#resultado{
+    margin-top: 10px; 
+    /* espaço acima do texto */
+
+    font-size: 18px; 
+    /* tamanho do texto */
+
+    font-weight: bold; 
+    /* deixa o texto em negrito */
+
+    text-align: center; 
+    /* centraliza o texto */
+}
+
+/* RESPONSIVIDADE PARA CELL (braian cozinhou nessa) */
+@media (max-width: 600px){
+
+    main{
+        width: 90%; 
+        /* faz a calculadora ocupar quase toda a tela */
+
+        padding: 20px; 
+        /* reduz o espaçamento */
+    }
+
+    h1{
+        font-size: 20px; 
+        /* texto menor para caber melhor */
+    }
+
+    button{
+        padding: 12px; 
+        /* botão maior para facilitar o toque */
+    }
+
+    input{
+        padding: 12px; 
+        /* campo maior para digitar */
+    }
+}
+
+footer{
+    position: fixed;      /* deixa no final da tela */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #1f1f1f;
+    color: #ccc;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
